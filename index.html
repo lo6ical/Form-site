@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="main">
+            <h1 id="title">Bird sighting Survey</h1>
+        <div id="info">
+            <p id="description">Thank you for taking the time to help us keep track of rare bird species</p>
+            <p id="participate">if you would like a chance to win a prize, pleace enter your name, age and email below!</p>
+        </div>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-field" for="name">
+                    Name
+                    <span>(optional)</span>
+                </label>
+                <input type="text" name="name" id="name" class="field" placeholder=" Enter your name">
+            </div>
+            <div class="form-group">
+                <label id="email-field" for="email">
+                    Email
+                    <span>(optional)</span>
+                </label>
+                <input type="text" name="email" id="email" class="field" placeholder=" Enter your email">
+            </div>
+            <div class="form-group">
+                <label id="age-field" for="age">
+                    Age
+                    <span>(optional)</span>
+                </label>
+                <input type="number" name="age" id="age" class="field" placeholder=" Age">
+            </div>
+            <div class="form-group">
+                <label id="region-field" for="region">Where did you make the sighting?</label>
+                <select id="dropdown" name="region" class="field" required>
+                    <option disabled selected value>Select a region</option>
+                    <option value="Ahvenanmaa">Ahvenanmaa</option>
+                    <option value="Etelä-Karjala">Etelä-Karjala</option>
+                    <option value="Etelä-Pohjanmaa">Etelä-Pohjanmaa</option>
+                    <option value="Etelä-Savo">Etelä-Savo</option>
+                    <option value="Kainuu">Kainuu</option>
+                    <option value="Kanta-Häme">Kanta-Häme</option>
+                    <option value="Keski-Pohjanmaa">Keski-Pohjanmaa</option>
+                    <option value="Keski-Suomi">Keski-Suomi</option>
+                    <option value="Kymenlaakso">Kymenlaakso</option>
+                    <option value="Lappi">Lappi</option>
+                    <option value="Päijät-Häme">Päijät-Häme</option>
+                    <option value="Pirkanmaa">Pirkanmaa</option>
+                    <option value="Pohjanmaa">Pohjanmaa</option>
+                    <option value="Pohjois-Karjala">Pohjois-Karjala</option>
+                    <option value="Pohjois-Pohjanmaa">Pohjois-Pohjanmaa</option>
+                    <option value="Pohjois-Savo">Pohjois-Savo</option>
+                    <option value="Satakunta">Satakunta</option>
+                    <option value="Uusimaa">Uusimaa</option>
+                    <option value="Varsinais-Suomi">Varsinais-Suomi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label id="species-field" for="species">Which species did you see?</label>
+                <input type="text" name="species" id="species" class="field" placeholder=" Species" required>
+            </div>
+            <div class="form-group">
+                <p class="p-label">Gender of the bird(s)?</p>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" name="gender" value="male" checked>
+                    Male
+                </label>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" name="gender" value="female">
+                    Female
+                </label>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" name="gender" value="both">
+                    Both
+                </label>
+                <label class="radio-label">
+                    <input type="radio" class="input-radio" name="gender" value="not-sure">
+                    I'm not sure
+                </label>
+            </div>
+            <div class="form-group">
+                <label id="submit-image" for="image">Upload an image:</label>
+                <input type="file" name="image" id="image-file">
+            </div>
+            <div class="form-group">
+                <p class="p-label">Any comments regarding the sighting or the survey?</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder=" Enter your comment here...."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+
+    </div>
     
 </body>
 </html>
